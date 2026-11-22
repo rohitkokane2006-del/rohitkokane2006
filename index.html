@@ -378,17 +378,17 @@ footer {
   section { padding: 58px 0; }
   .project-card p { min-height: auto; }
   .hero { min-height: auto; }
-  .project-gallery {
-  margin-top: 22px;
 }
 
+/* SR Flip-Flop photo gallery */
+.project-gallery { margin-top: 22px; }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
-
 .gallery-grid img {
+  display: block;
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -397,15 +397,12 @@ footer {
   cursor: pointer;
   transition: transform .25s ease;
 }
+.gallery-grid img:hover { transform: scale(1.04); }
 
-.gallery-grid img:hover {
-  transform: scale(1.04);
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
 }
-}
-
-}
-    }
-  </style>
+</style>
   
 
 
@@ -436,9 +433,9 @@ footer {
       <div>
         <div class="portrait-shell">
           <!-- Replace rohit.jpg with your own photo file, e.g. assets/rohit.jpg -->
-          <img src="rohit.jpg" alt="Rohit Kokane profile photo placeholder">
+          <img src="rohit.jpg" alt="Rohit Kokane profile photo">
         </div>
-        <div class="photo-note">Replace this placeholder with your professional profile photo.</div>
+        <div class="photo-note">Electronics &amp; Computer Engineering student</div>
       </div>
     </header>
 
@@ -472,7 +469,6 @@ footer {
     </section>
 
     <section id="projects">
-      <p>SR Flip-Flop project description...</p>
       <div class="container">
         <div class="section-head"><div class="eyebrow">Selected academic work</div><h2>My projects</h2><p>A few projects that demonstrate my interest in electronics and digital systems. Add your own photographs, circuit diagrams and GitHub links when available.</p></div>
         <div class="projects">
@@ -535,63 +531,21 @@ footer {
     <section id="contact">
       <div class="container">
         <div class="contact-box">
-          <div><div class="eyebrow">Let's connect</div><h2 style="margin:6px 0 0; letter-spacing:-.04em;">Have an opportunity or project in mind?</h2><p>I'm interested in learning, collaborating and exploring internship opportunities.</p></div>
+          <div>
+            <div class="eyebrow">Let's connect</div>
+            <h2 style="margin:6px 0 0; letter-spacing:-.04em;">Have an opportunity or project in mind?</h2>
+            <p>I'm interested in learning, collaborating and exploring internship opportunities.</p>
+          </div>
           <div class="hero-actions" style="margin:0;">
-           
-<div class="hero-actions" style="margin:0;">
-
-  <!-- Mobile Number -->
-  <a class="btn btn-secondary"
-     href="tel:+917218874301">
-    📞 Call Me
-  </a>
-
-  <!-- WhatsApp -->
-  <a class="btn btn-primary"
-     href="https://wa.me/917218874301"
-     target="_blank"
-     rel="noopener">
-    💬 WhatsApp
-  </a>
-
-  <!-- Instagram -->
-  <a class="btn btn-secondary"
-     href="https://www.instagram.com/rohit_kokane_26/"
-     target="_blank"
-     rel="noopener">
-    📸 Instagram
-  </a>
-
-  <!-- Email -->
-  <a class="btn btn-secondary"
-     href="mailto:YOUR_EMAIL@example.com">
-    ✉️ Email Me
-  </a>
-
-  <!-- LinkedIn -->
-  <a class="btn btn-secondary"
-     href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
-     target="_blank"
-     rel="noopener">
-    LinkedIn
-  </a>
-
-  <!-- GitHub -->
-  <a class="btn btn-secondary"
-     href="https://github.com/YOUR_GITHUB_USERNAME"
-     target="_blank"
-     rel="noopener">
-    GitHub
-  </a>
-
-</div>
-
-            <a class="btn btn-primary" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+            <a class="btn btn-secondary" href="tel:+917218874301">📞 Call Me</a>
+            <a class="btn btn-primary" href="https://wa.me/917218874301" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/rohit_kokane_26/" target="_blank" rel="noopener">📸 Instagram</a>
+            <a class="btn btn-secondary" href="mailto:YOUR_EMAIL@example.com">✉️ Email Me</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn-secondary" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-secondary" href="https://github.com/rohitkokane2006-del" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
-        <p class="small-note" style="text-align:center; margin-top:18px;">Before publishing, replace the sample email and social links with your real profiles.</p>
+        <p class="small-note" style="text-align:center; margin-top:18px;">Replace the sample email and LinkedIn URL with your real details before sharing.</p>
       </div>
     </section>
   </main>
